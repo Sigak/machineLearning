@@ -37,7 +37,7 @@
       function countColors(args, ammount) {
         var length = ammount;
         for (var i=0; i<length; i++) {
-          while (~args[i].color.indexOf(' ')) {
+          while (~(args[i].color+'').indexOf(' ')) {
             args.push({color: args[i].color.slice(0, args[i].color.indexOf(' '))});
             args[i].color = args[i].color.slice(args[i].color.indexOf(' ')+1);
             ammount = args.length;
